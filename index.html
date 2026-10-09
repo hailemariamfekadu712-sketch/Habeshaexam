@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mekuria Prep – Ethiopian Exam Practice</title>
+<style>
+:root{--bg:#0a1730;--panel:#11244a;--panel2:#16305f;--line:#26427a;--gold:#e2b865;--green:#34d58a;--red:#f0605d;--blue:#3b82f6;--text:#eef3ff;--mut:#9db0d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:"Segoe UI",system-ui,Tahoma,sans-serif;color:var(--text);background-color:var(--bg);min-height:100vh}
+#bg{position:fixed;inset:0;z-index:-1;background:
+ linear-gradient(180deg,rgba(10,23,48,.78),rgba(10,23,48,.94)),
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23e2b865' stroke-opacity='.22' stroke-width='2'%3E%3Cpath d='M0 60 30 30l30 30-30 30zM60 60l30-30 30 30-30 30z'/%3E%3Cpath d='M30 60h60M60 30v60' stroke-opacity='.12'/%3E%3C/g%3E%3Ccircle cx='60' cy='60' r='5' fill='%23c0392b' fill-opacity='.35'/%3E%3Ccircle cx='0' cy='0' r='5' fill='%2334d58a' fill-opacity='.25'/%3E%3Ccircle cx='120' cy='120' r='5' fill='%23e2b865' fill-opacity='.3'/%3E%3C/svg%3E"),
+ radial-gradient(circle at 80% 0,#27508f 0,#0a1730 60%)}
+.app{display:flex;min-height:100vh}
+aside{width:230px;padding:22px 14px;background:rgba(10,23,48,.82);backdrop-filter:blur(8px);border-right:1px solid var(--line);position:sticky;top:0;height:100vh;flex-shrink:0}
+.logo{display:flex;align-items:center;gap:10px;margin:0 8px 26px}
+.logo b{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--gold);color:#10224a;font-size:22px}
+.logo span{font-weight:700;font-size:18px;line-height:1.1}.logo small{display:block;color:var(--mut);font-weight:400;font-size:12px}
+nav button{display:flex;gap:10px;align-items:center;width:100%;padding:12px 14px;margin-bottom:6px;border:0;border-radius:10px;background:none;color:var(--mut);font:inherit;font-size:15px;cursor:pointer;text-align:left}
+nav button:hover{background:var(--panel)}nav button.on{background:var(--gold);color:#10224a;font-weight:600}
+main{flex:1;padding:24px 30px;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+h1{margin:0;font-size:28px}h2{margin:0 0 14px;font-size:18px}
+.who{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);padding:6px 14px 6px 6px;border-radius:30px}
+.who i{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#c0392b);display:grid;place-items:center;font-style:normal;color:#10224a;font-weight:700}
+.grid{display:grid;gap:16px}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:3fr 2fr}
+.card{background:rgba(17,36,74,.88);border:1px solid var(--line);border-radius:16px;padding:18px}
+.stat{border-width:2px;position:relative}.stat .l{color:var(--mut);font-size:14px}.stat .v{font-size:32px;font-weight:700;margin:6px 0 2px}.stat .s{font-size:13px}
+.stat.gold{border-color:var(--gold);box-shadow:0 0 22px rgba(226,184,101,.25)}.stat.green{border-color:var(--green);box-shadow:0 0 22px rgba(52,213,138,.22)}
+.stat.red{border-color:var(--red);box-shadow:0 0 22px rgba(240,96,93,.22)}.stat.blue{border-color:var(--blue);box-shadow:0 0 22px rgba(59,130,246,.25)}
+.up{color:var(--green)}.down{color:var(--red)}.mut{color:var(--mut)}
+.bar{height:10px;background:#0b1a38;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;border-radius:9px;transition:width .8s}
+.row{display:flex;justify-content:space-between;font-size:14px;margin:12px 0 6px}
+.btn{border:0;border-radius:10px;padding:11px 20px;font:inherit;font-weight:600;cursor:pointer;background:var(--gold);color:#10224a}
+.btn.go{background:var(--green)}.btn.ghost{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn:disabled{opacity:.4;cursor:default}
+.btn:focus-visible,nav button:focus-visible,.opt:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.subj{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.subj .card{cursor:pointer;transition:transform .2s,border-color .2s}.subj .card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.ico{font-size:34px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{padding:8px 16px;border-radius:20px;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;font:inherit}.chip.on{background:var(--gold);color:#10224a;border-color:var(--gold)}
+.opt{display:block;width:100%;text-align:left;padding:14px 16px;margin-bottom:10px;border-radius:12px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font:inherit;cursor:pointer}
+.opt:hover{border-color:var(--gold)}.opt.sel{border-color:var(--gold);background:#3a3a3a55;box-shadow:inset 0 0 0 1px var(--gold)}
+.opt.ok{border-color:var(--green);background:rgba(52,213,138,.15)}.opt.bad{border-color:var(--red);background:rgba(240,96,93,.15)}
+.timer{font-size:22px;font-weight:700;color:var(--gold)}.timer.low{color:var(--red)}
+table{width:100%;border-collapse:collapse}th,td{padding:12px 8px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}th{color:var(--mut);font-weight:500}
+.pill{padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600}
+details{background:var(--panel2);border-radius:12px;padding:14px;margin-bottom:10px;border:1px solid var(--line)}summary{cursor:pointer;font-weight:600}
+.modal{position:fixed;inset:0;background:rgba(5,10,25,.8);display:grid;place-items:center;padding:20px;z-index:9}.modal .card{max-width:560px;max-height:85vh;overflow:auto}
+.chartwrap{overflow-x:auto}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--green);color:#06301c;padding:12px 22px;border-radius:12px;font-weight:600;z-index:10}
+.score{font-size:64px;font-weight:800}
+@media(max-width:900px){.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}
+ aside{position:fixed;bottom:0;top:auto;left:0;right:0;width:100%;height:auto;z-index:5;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));border-right:0;border-top:1px solid var(--line)}
+ .logo{display:none}nav{display:flex;gap:2px;overflow-x:auto}nav button{flex-direction:column;gap:2px;font-size:11px;padding:8px 10px;margin:0;text-align:center;white-space:nowrap}
+ main{padding:16px 14px 100px}h1{font-size:22px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+#auth{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:rgba(5,10,25,.82);backdrop-filter:blur(6px);overflow:auto}
+.authbox{width:100%;max-width:400px}.authbox label{display:block;margin:12px 0;font-size:14px;color:var(--mut)}
+.authbox input{display:block;width:100%;margin-top:6px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:#0b1a38;color:var(--text);font:inherit}
+.authbox input:focus{outline:3px solid var(--gold);outline-offset:1px}.authbox a{color:var(--gold)}.err{color:var(--red);min-height:20px;margin:4px 0 10px;font-size:14px}
+</style></head>
+<body><div id="bg"></div>
+<div class="app"><aside><div class="logo"><b>ፈ</b><span>Mekuria Prep<small>Exam practice</small></span></div><nav id="nav"></nav></aside>
+<main><div class="top"><h1 id="title"></h1><div class="who"><i id="uav">S</i><span id="uname">Student</span></div></div><div id="view"></div></main></div>
+<script src="config.js"></script>
+<script>
+const SUBJECTS={
+Mathematics:{ico:"∑",color:"#e2b865",q:[
+["Solve: 2x + 6 = 20",["x = 5","x = 7","x = 10","x = 13"],1],
+["What is 15% of 240?",["24","30","36","40"],2],
+["The area of a circle with radius 7 (π ≈ 22/7) is:",["44","154","308","49"],1],
+["The value of 3² + 4² is:",["7","12","25","49"],2],
+["The slope of the line y = 3x − 2 is:",["−2","2","3","1/3"],2]]},
+English:{ico:"Aa",color:"#34d58a",q:[
+["Choose the correct sentence.",["She go to school.","She goes to school.","She going to school.","She gone to school."],1],
+["The opposite of 'generous' is:",["kind","selfish","happy","rich"],1],
+["A word that describes a noun is a(n):",["verb","adverb","adjective","pronoun"],2],
+["Past tense of 'write' is:",["writed","written","wrote","writing"],2],
+["'The sun rose slowly.' The word 'slowly' is a(n):",["noun","adverb","adjective","verb"],1]]},
+Physics:{ico:"⚛",color:"#3b82f6",q:[
+["The SI unit of force is the:",["Joule","Watt","Newton","Pascal"],2],
+["Speed = distance ÷ ?",["mass","time","force","volume"],1],
+["Which is a vector quantity?",["Mass","Speed","Velocity","Time"],2],
+["Light travels fastest in:",["water","glass","air","vacuum"],3],
+["Ohm's law relates voltage, current and:",["power","resistance","energy","charge"],1]]},
+Biology:{ico:"🧬",color:"#f0605d",q:[
+["The powerhouse of the cell is the:",["nucleus","ribosome","mitochondrion","vacuole"],2],
+["Plants make food by:",["digestion","respiration","photosynthesis","fermentation"],2],
+["Blood is pumped by the:",["lungs","heart","liver","kidney"],1],
+["DNA is found mainly in the:",["nucleus","cell wall","membrane","cytoplasm"],0],
+["Which gas do plants take in for photosynthesis?",["Oxygen","Nitrogen","Carbon dioxide","Hydrogen"],2]]}};
+const MATERIALS=[
+["Mathematics","Solving linear equations","Isolate the unknown: do the same operation to both sides. Example: 3x + 5 = 20 → 3x = 15 → x = 3. Always check by substituting your answer back."],
+["English","Tenses at a glance","Present: she writes. Past: she wrote. Future: she will write. Perfect tenses use have/has/had + past participle: she has written."],
+["Physics","Newton's three laws","1) An object keeps its motion unless a force acts. 2) F = m × a. 3) Every action has an equal and opposite reaction."],
+["Biology","Photosynthesis","Carbon dioxide + water + light → glucose + oxygen. It happens in chloroplasts, which contain chlorophyll."],
+["Mathematics","Percentages quick guide","Percentage = part ÷ whole × 100. To find 15% of a number, multiply by 0.15."],
+["Physics","Speed, velocity, acceleration","Speed = distance ÷ time. Velocity is speed with direction. Acceleration = change in velocity ÷ time."]];
+const KEY="mekuria_prep_v1",$=s=>document.querySelector(s);
+const NAV=[["dash","🏠","Dashboard"],["exam","📝","Mock exams"],["bank","📚","Question bank"],["mat","📖","Materials"],["res","📊","Results"],["set","⚙️","Settings"]];
+let S=[],USER=null,page="dash",ex=null,tick=null,bankSub="All";
+const API=(window.API_BASE||"").replace(/\/$/,"");let TOKEN=null;
+try{TOKEN=localStorage.getItem("mp_token")}catch(e){}
+function setToken(t){TOKEN=t;try{t?localStorage.setItem("mp_token",t):localStorage.removeItem("mp_token")}catch(e){}}
+async function api(path,method="GET",body){
+ let r;try{r=await fetch(API+"/api"+path,{method,headers:{"Content-Type":"application/json",...(TOKEN?{Authorization:"Bearer "+TOKEN}:{})},body:body?JSON.stringify(body):undefined})}
+ catch(e){throw new Error("Cannot reach the server. Check your connection and try again.")}
+ const d=await r.json().catch(()=>({}));if(!r.ok){const er=new Error(d.error||"Something went wrong");er.status=r.status;throw er}return d}
+async function saveResult(r){r.date=Date.now();S.push(r);try{await api("/results","POST",r)}catch(e){toast("Result not saved: "+e.message)}}
+function authScreen(mode="login"){
+ document.getElementById("auth")?.remove();const reg=mode=="register",d=document.createElement("div");d.id="auth";
+ d.innerHTML=`<form class="card authbox" novalidate><div class="logo"><b>ፈ</b><span>Mekuria Prep<small>Exam practice</small></span></div>
+ <h2>${reg?"Create your account":"Log in"}</h2>
+ ${reg?'<label>Full name<input name="name" autocomplete="name"></label>':""}
+ <label>Email<input name="email" type="email" autocomplete="email"></label>
+ <label>Password<input name="password" type="password" autocomplete="${reg?"new-password":"current-password"}" ${reg?'placeholder="At least 8 characters"':""}></label>
+ <p class="err" id="aerr" role="alert"></p><button class="btn" style="width:100%">${reg?"Register":"Log in"}</button>
+ <p class="mut" style="text-align:center">${reg?"Already registered?":"New here?"} <a href="#" id="sw">${reg?"Log in":"Create an account"}</a></p></form>`;
+ document.body.appendChild(d);d.querySelector("input").focus();
+ d.querySelector("#sw").onclick=e=>{e.preventDefault();authScreen(reg?"login":"register")};
+ d.querySelector("form").onsubmit=async e=>{e.preventDefault();const f=e.target,btn=f.querySelector("button"),err=d.querySelector("#aerr");err.textContent="";btn.disabled=true;
+  try{const body={email:f.email.value,password:f.password.value};if(reg)body.name=f.name.value;
+   const res=await api(reg?"/register":"/login","POST",body);setToken(res.token);USER=res.user;S=(await api("/results")).results;start()}
+  catch(x){err.textContent=x.message;btn.disabled=false}}}
+function start(){$("#uname").textContent=USER.name.split(" ")[0];$("#uav").textContent=USER.name[0].toUpperCase();document.getElementById("auth")?.remove();go("dash")}
+function logout(){setToken(null);S=[];USER=null;clearInterval(tick);ex=null;authScreen()}
+async function boot(){if(!TOKEN)return authScreen();
+ try{USER=(await api("/me")).user;S=(await api("/results")).results;start()}
+ catch(e){if(e.status==401){setToken(null);authScreen()}else{authScreen();$("#aerr").textContent=e.message}}}
+const pct=r=>Math.round(r.score/r.total*100),fmt=t=>new Date(t).toLocaleDateString(undefined,{month:"short",day:"numeric"});
+const avg=a=>a.length?Math.round(a.reduce((x,y)=>x+y,0)/a.length):0;
+function nav(){$("#nav").innerHTML=NAV.map(n=>`<button class="${page==n[0]?"on":""}" data-p="${n[0]}"><span>${n[1]}</span>${n[2]}</button>`).join("");
+ $("#nav").querySelectorAll("button").forEach(b=>b.onclick=()=>go(b.dataset.p))}
+function go(p){page=p;if(p!="exam"){clearInterval(tick);ex=null}nav();$("#title").textContent=NAV.find(n=>n[0]==p)[2];VIEWS[p]();window.scrollTo(0,0)}
+function stats(){const subs=Object.keys(SUBJECTS),by=subs.map(s=>{const r=S.filter(x=>x.subject==s);return{s,n:r.length,a:avg(r.map(pct))}});
+ const last=S.slice(-3).map(pct),prev=S.slice(-6,-3).map(pct),t=avg(last)-avg(prev);
+ let streak=0;const days=new Set(S.map(r=>new Date(r.date).toDateString()));for(let i=0;i<30;i++){if(days.has(new Date(Date.now()-i*864e5).toDateString()))streak++;else if(i>0)break;else continue}
+ return{by,avg:avg(S.map(pct)),weak:by.filter(b=>b.n&&b.a<60),t,streak}}
+function lineChart(d){if(!d.length)return'<p class="mut">Take a mock exam to see your trend.</p>';const W=560,H=220,p=34,n=d.length,x=i=>p+(n==1?0:i*(W-2*p)/(n-1)),y=v=>H-p-v*(H-2*p)/100;
+ const pts=d.map((v,i)=>[x(i),y(v)]),path=pts.map((q,i)=>(i?"L":"M")+q[0]+" "+q[1]).join(" ");
+ return`<div class="chartwrap"><svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:360px"><defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2b865" stop-opacity=".45"/><stop offset="1" stop-color="#e2b865" stop-opacity="0"/></linearGradient></defs>
+ ${[0,25,50,75,100].map(v=>`<line x1="${p}" x2="${W-p}" y1="${y(v)}" y2="${y(v)}" stroke="#26427a" stroke-dasharray="3 4"/><text x="4" y="${y(v)+4}" fill="#9db0d6" font-size="11">${v}%</text>`).join("")}
+ <path d="${path} L${x(n-1)} ${y(0)} L${x(0)} ${y(0)}Z" fill="url(#ga)"/><path d="${path}" fill="none" stroke="#e2b865" stroke-width="3" stroke-linejoin="round"/>
+ ${pts.map((q,i)=>`<circle cx="${q[0]}" cy="${q[1]}" r="4.5" fill="#0a1730" stroke="#e2b865" stroke-width="2.5"><title>${d[i]}%</title></circle>`).join("")}</svg></div>`}
+function barChart(by){const W=560,H=220,p=34,bw=(W-2*p)/by.length;
+ return`<div class="chartwrap"><svg viewBox="0 0 ${W} ${H}" width="100%" style="min-width:360px">${[0,50,100].map(v=>{const yy=H-p-v*(H-2*p)/100;return`<line x1="${p}" x2="${W-p}" y1="${yy}" y2="${yy}" stroke="#26427a" stroke-dasharray="3 4"/><text x="4" y="${yy+4}" fill="#9db0d6" font-size="11">${v}%</text>`}).join("")}
+ ${by.map((b,i)=>{const h=b.a*(H-2*p)/100,xx=p+i*bw+bw*.25;return`<rect x="${xx}" y="${H-p-h}" width="${bw*.5}" height="${h}" rx="6" fill="${SUBJECTS[b.s].color}"/><text x="${xx+bw*.25}" y="${H-p-h-6}" fill="#eef3ff" font-size="12" text-anchor="middle">${b.a}%</text><text x="${xx+bw*.25}" y="${H-10}" fill="#9db0d6" font-size="12" text-anchor="middle">${b.s.slice(0,7)}</text>`}).join("")}</svg></div>`}
+const VIEWS={
+dash(){const st=stats(),best=[...st.by].filter(b=>b.n).sort((a,b)=>b.a-a.a)[0];
+ $("#view").innerHTML=`<div class="grid g4">
+ <div class="card stat gold"><div class="l">Exams taken</div><div class="v">${S.length}</div><div class="s mut">${S.filter(r=>Date.now()-r.date<6048e5).length} this week</div></div>
+ <div class="card stat green"><div class="l">Average score</div><div class="v">${st.avg}%</div><div class="s ${st.t>=0?"up":"down"}">${st.t>=0?"↑":"↓"} ${Math.abs(st.t)}% vs earlier</div></div>
+ <div class="card stat red"><div class="l">Weak subjects</div><div class="v">${st.weak.length}</div><div class="s down">${st.weak.map(w=>w.s).join(", ")||"None – great work"}</div></div>
+ <div class="card stat blue"><div class="l">Day streak</div><div class="v">${st.streak}</div><div class="s mut">${best?"Best: "+best.s:"Start today"}</div></div></div>
+ <div class="grid g2" style="margin-top:16px"><div class="card"><h2>Score trend</h2>${lineChart(S.slice(-10).map(pct))}</div>
+ <div class="card"><h2>Progress by subject</h2>${st.by.map(b=>`<div class="row"><span>${SUBJECTS[b.s].ico} ${b.s}</span><span class="mut">${b.n?b.a+"% · "+b.n+" exams":"Not started"}</span></div><div class="bar"><i style="width:${b.a}%;background:${SUBJECTS[b.s].color}"></i></div>`).join("")}
+ <button class="btn go" style="margin-top:20px;width:100%" onclick="go('exam')">Start a mock exam</button></div></div>
+ <div class="card" style="margin-top:16px"><h2>Average by subject</h2>${barChart(st.by)}</div>`},
+exam(){clearInterval(tick);ex=null;$("#view").innerHTML=`<p class="mut">Choose a subject. Each exam has 5 questions and a 5-minute timer.</p><div class="subj">${Object.keys(SUBJECTS).map(s=>`<div class="card" tabindex="0" role="button" data-s="${s}"><div class="ico" style="color:${SUBJECTS[s].color}">${SUBJECTS[s].ico}</div><h2 style="margin:8px 0 4px">${s}</h2><div class="mut">${SUBJECTS[s].q.length} questions · best ${Math.max(0,...S.filter(r=>r.subject==s).map(pct))}%</div></div>`).join("")}</div>`;
+ document.querySelectorAll("[data-s]").forEach(c=>{c.onclick=()=>startExam(c.dataset.s);c.onkeydown=e=>{if(e.key=="Enter")startExam(c.dataset.s)}})},
+bank(){const subs=["All",...Object.keys(SUBJECTS)];
+ let items=[];Object.entries(SUBJECTS).forEach(([s,v])=>v.q.forEach(q=>{if(bankSub=="All"||bankSub==s)items.push([s,q])}));
+ $("#view").innerHTML=`<div class="chips">${subs.map(s=>`<button class="chip ${s==bankSub?"on":""}" data-b="${s}">${s}</button>`).join("")}</div>`+items.map(([s,q],i)=>`<details><summary>${q[0]} <span class="mut">· ${s}</span></summary><p style="margin:10px 0 0">Answer: <b class="up">${q[1][q[2]]}</b></p></details>`).join("");
+ document.querySelectorAll("[data-b]").forEach(b=>b.onclick=()=>{bankSub=b.dataset.b;VIEWS.bank()})},
+mat(){$("#view").innerHTML=`<div class="subj">${MATERIALS.map((m,i)=>`<div class="card" tabindex="0" role="button" data-m="${i}"><div class="pill" style="background:${SUBJECTS[m[0]].color};color:#10224a;display:inline-block">${m[0]}</div><h2 style="margin:12px 0 6px">${m[1]}</h2><div class="mut">Tap to read</div></div>`).join("")}</div>`;
+ document.querySelectorAll("[data-m]").forEach(c=>{const o=()=>{const m=MATERIALS[c.dataset.m],d=document.createElement("div");d.className="modal";d.innerHTML=`<div class="card"><h2>${m[1]}</h2><p style="line-height:1.7">${m[2]}</p><button class="btn">Close</button></div>`;d.onclick=e=>{if(e.target==d||e.target.tagName=="BUTTON")d.remove()};document.body.appendChild(d)};c.onclick=o;c.onkeydown=e=>{if(e.key=="Enter")o()}})},
+res(){$("#view").innerHTML=`<div class="card"><h2>Exam history</h2>${S.length?`<div class="chartwrap"><table><tr><th>Date</th><th>Subject</th><th>Score</th><th>Result</th></tr>${[...S].reverse().map(r=>{const p=pct(r),c=p>=70?"var(--green)":p>=50?"var(--gold)":"var(--red)";return`<tr><td>${fmt(r.date)}</td><td>${r.subject}</td><td>${r.score}/${r.total} · ${p}%</td><td><span class="pill" style="background:${c};color:#10224a">${p>=70?"Strong":p>=50?"Pass":"Needs work"}</span></td></tr>`}).join("")}</table></div>`:'<p class="mut">No results yet. Take your first mock exam.</p>'}</div>`},
+set(){$("#view").innerHTML=`<div class="card" style="max-width:520px"><h2>Your account</h2><p style="line-height:1.7;margin:0 0 16px"><b>${USER.name}</b><br><span class="mut">${USER.email}</span></p><p class="mut" style="line-height:1.6">Your exam results are saved to your account, so you can log in from any device and keep your progress.</p><button class="btn ghost" id="lo">Log out</button></div>`;
+ $("#lo").onclick=logout}};
+function toast(t){const d=document.createElement("div");d.className="toast";d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),2200)}
+function startExam(s){const q=[...SUBJECTS[s].q].map(x=>x).sort(()=>Math.random()-.5);ex={s,q,a:Array(q.length).fill(null),i:0,left:300,done:false};clearInterval(tick);
+ tick=setInterval(()=>{ex.left--;const t=$("#tm");if(t){t.textContent=Math.floor(ex.left/60)+":"+String(ex.left%60).padStart(2,"0");t.classList.toggle("low",ex.left<60)}if(ex.left<=0)finish()},1000);drawQ()}
+function drawQ(){const q=ex.q[ex.i];
+ $("#view").innerHTML=`<div class="card" style="max-width:720px;margin:auto"><div class="top" style="margin-bottom:10px"><span class="mut">${ex.s} · Question ${ex.i+1} of ${ex.q.length}</span><span class="timer" id="tm">${Math.floor(ex.left/60)}:${String(ex.left%60).padStart(2,"0")}</span></div>
+ <div class="bar" style="margin-bottom:18px"><i style="width:${(ex.i+1)/ex.q.length*100}%;background:var(--gold)"></i></div><h2 style="font-size:21px">${q[0]}</h2>
+ ${q[1].map((o,k)=>`<button class="opt ${ex.a[ex.i]===k?"sel":""}" data-k="${k}"><b>${"ABCD"[k]}.</b> ${o}</button>`).join("")}
+ <div style="display:flex;justify-content:space-between;margin-top:16px"><button class="btn ghost" id="pv" ${ex.i?"":"disabled"}>Previous</button>${ex.i<ex.q.length-1?'<button class="btn" id="nx">Next</button>':'<button class="btn go" id="fin">Submit exam</button>'}</div></div>`;
+ document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ex.a[ex.i]=+b.dataset.k;drawQ()});
+ $("#pv").onclick=()=>{ex.i--;drawQ()};const n=$("#nx");if(n)n.onclick=()=>{ex.i++;drawQ()};const f=$("#fin");if(f)f.onclick=()=>{const un=ex.a.filter(a=>a===null).length;if(!un||confirm(un+" unanswered. Submit anyway?"))finish()}}
+function finish(){if(!ex||ex.done)return;ex.done=true;clearInterval(tick);const sc=ex.q.reduce((n,q,i)=>n+(ex.a[i]===q[2]?1:0),0);
+ saveResult({subject:ex.s,score:sc,total:ex.q.length});const p=Math.round(sc/ex.q.length*100),c=p>=70?"var(--green)":p>=50?"var(--gold)":"var(--red)";
+ $("#view").innerHTML=`<div class="card" style="max-width:720px;margin:auto;text-align:center"><div class="mut">${ex.s} result</div><div class="score" style="color:${c}">${p}%</div><p>You got <b>${sc}</b> of ${ex.q.length} correct. ${p>=70?"Excellent work!":p>=50?"Good effort – review the misses below.":"Keep practising – read the materials, then try again."}</p>
+ <div style="text-align:left;margin-top:18px">${ex.q.map((q,i)=>`<div style="margin-bottom:16px"><b>${i+1}. ${q[0]}</b>${q[1].map((o,k)=>`<div class="opt ${k==q[2]?"ok":ex.a[i]==k?"bad":""}" style="cursor:default;margin:6px 0">${o}${k==q[2]?" ✓":ex.a[i]==k?" ✗ your answer":""}</div>`).join("")}</div>`).join("")}</div>
+ <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn" onclick="go('dash')">View dashboard</button><button class="btn ghost" onclick="go('exam')">Another exam</button></div></div>`;window.scrollTo(0,0)}
+boot();
+</script></body></html>
